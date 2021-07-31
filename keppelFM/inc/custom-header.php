@@ -8,39 +8,39 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package BizFocused
+ * @package KeppelFM
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses bizfocused_header_style()
+ * @uses keppelfm_header_style()
  */
-function bizfocused_custom_header_setup() {
+function keppelfm_custom_header_setup() {
 	add_theme_support(
 		'custom-header',
 		apply_filters(
-			'bizfocused_custom_header_args',
+			'keppelfm_custom_header_args',
 			array(
 				'default-image'      => '',
 				'default-text-color' => '000000',
 				'width'              => 1000,
 				'height'             => 250,
 				'flex-height'        => true,
-				'wp-head-callback'   => 'bizfocused_header_style',
+				'wp-head-callback'   => 'keppelfm_header_style',
 			)
 		)
 	);
 }
-add_action( 'after_setup_theme', 'bizfocused_custom_header_setup' );
+add_action( 'after_setup_theme', 'keppelfm_custom_header_setup' );
 
-if ( ! function_exists( 'bizfocused_header_style' ) ) :
+if ( ! function_exists( 'keppelfm_header_style' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @see bizfocused_custom_header_setup().
+	 * @see keppelfm_custom_header_setup().
 	 */
-	function bizfocused_header_style() {
+	function keppelfm_header_style() {
 		$header_text_color = get_header_textcolor();
 
 		/*

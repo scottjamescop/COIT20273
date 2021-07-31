@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package BizFocused
+ * @package KeppelFM
  */
 
 /**
@@ -14,13 +14,13 @@
  * See: https://jetpack.com/support/responsive-videos/
  * See: https://jetpack.com/support/content-options/
  */
-function bizfocused_jetpack_setup() {
+function keppelfm_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support(
 		'infinite-scroll',
 		array(
 			'container' => 'main',
-			'render'    => 'bizfocused_infinite_scroll_render',
+			'render'    => 'keppelfm_infinite_scroll_render',
 			'footer'    => 'page',
 		)
 	);
@@ -33,7 +33,7 @@ function bizfocused_jetpack_setup() {
 		'jetpack-content-options',
 		array(
 			'post-details' => array(
-				'stylesheet' => 'bizfocused-style',
+				'stylesheet' => 'keppelfm-style',
 				'date'       => '.posted-on',
 				'categories' => '.cat-links',
 				'tags'       => '.tags-links',
@@ -48,12 +48,12 @@ function bizfocused_jetpack_setup() {
 		)
 	);
 }
-add_action( 'after_setup_theme', 'bizfocused_jetpack_setup' );
+add_action( 'after_setup_theme', 'keppelfm_jetpack_setup' );
 
 /**
  * Custom render function for Infinite Scroll.
  */
-function bizfocused_infinite_scroll_render() {
+function keppelfm_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
 		if ( is_search() ) :

@@ -22,7 +22,7 @@
     height: 100px;
     transition: .35s all;
     top: 0;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 1);
 }
 #header.small *{
   text-shadow: none;

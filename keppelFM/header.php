@@ -23,7 +23,7 @@
 			<header id="header" role="banner" class="">
 				<div id="logoContainer">
 					<a href="/">
-						<div class="logoText"></div>
+						<div class="logoText"> Hello World</div>
 					</a>
 				</div>
 				<div class="row expanded collapse sameheight-nav-wrap text-right">

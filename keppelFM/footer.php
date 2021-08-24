@@ -12,19 +12,35 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'keppelfm' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'keppelfm' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'keppelfm' ), 'keppelfm', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
+		<div class="container firstFooter">
+			<div class="row">
+				<div class="col-md-2">
+
+				</div>
+				<div class="col-md-4">
+					<h4>KEPPEL FM</h4>
+					78 John Street<br />
+					(PO Box 346)<br />
+					Yeppoon,<br />
+					Queensland 4703<br />
+					Phone (07) 4939 8211
+				</div>
+				<div class="col-md-4">
+					<h4>Connect with Us</h4>
+					<img class="socialLogo" src="<?php echo wp_get_attachment_image_src(38, "full")[0]; ?>" />
+				</div>
+				<div class="col-md-2">
+
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid noPadding bottomFooter">
+			<div class="row">
+				<div class="col-sm-12 text-center">
+					<p class="smallText">© 1996 -2021; Keppel FM 91.3</p>
+				</div>	
+			</div>
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

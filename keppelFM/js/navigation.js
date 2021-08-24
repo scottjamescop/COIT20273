@@ -46,3 +46,15 @@
         });
     });
 })( jQuery );
+
+
+$(window).scroll(function () {
+  var scroll = $(window).scrollTop();
+  //>=, not <=
+  if (scroll >= 50) {
+    //clearHeader, not clearheader - caps H
+    $("#header").removeClass("darkHeader");
+  } else {
+    $("#header").addClass("darkHeader");
+  }
+}); //missing );

@@ -1,0 +1,78 @@
+#logoContainer{
+    position: relative;
+}
+@media only screen and (min-width: 1024px) {
+    #logoContainer img{
+        position: absolute;
+        left: 50%;
+        max-width: 200px;
+    }
+}
+@media only screen and (max-width: 1023px) {
+    #logoContainer img{
+        position: absolute;
+        left: 0;
+        max-width: 220px;
+    }
+}
+.tileRow{
+    margin-top: 25px;
+}
+
+.tileRow > div >div{
+    padding: 0;
+    overflow: hidden;
+}
+.tileContent{    
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    width: 100%;
+}
+.tileContainer{
+    position: relative;
+    min-height: 400px;
+    transition: .35s all;
+}
+.tileContainer:hover{
+    transform: scale(1.05);
+}
+.text-center{
+    text-align: center;
+}
+.smallText{
+    font-size: .8rem;
+    margin-bottom: 0;
+}
+
+.socialLogo{
+    max-width: 70px;
+}
+
+.noPadding{
+    padding: 0;
+}
+body, .post{
+    margin: 0 !important;
+    overflow-x: hidden;
+}
+
+.bottomFooter{
+    background-color: #000;
+    color: #fff;
+}
+.bottomFooter p{
+    padding: 10px 0;
+}
+.firstFooter{
+    padding: 20px 0;
+}
+footer{
+    background-image: linear-gradient(to left top, #000000, #3b0e1a, #720621, #a9001d, #dc0000);
+    color: #fff;
+}
+.bottomFooter .row{
+    width: 100%;
+}

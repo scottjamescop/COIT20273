@@ -1,0 +1,163 @@
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto; }
+  
+
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto; }
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px; 
+  }
+
+  .no-gutters {
+  margin-right: 0;
+  margin-left: 0; }
+  .no-gutters > .col,
+  .no-gutters > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0; }
+
+
+.justify-content-center {
+  -webkit-box-pack: center !important;
+  -ms-flex-pack: center !important;
+  justify-content: center !important; }
+
+.align-items-center {
+  -webkit-box-align: center !important;
+  -ms-flex-align: center !important;
+  align-items: center !important; }
+
+.w-100 {
+  width: 100% !important; }
+
+body {
+  font-family: "Khula",sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  font-weight: normal;
+  background: #fafafa;
+  color: #666666; }
+
+
+.ftco-section {
+  padding: 1em 0; }
+
+
+.form-control {
+  height: 44px;
+  font-size: 14px; }
+  
+
+textarea.form-control {
+  height: inherit !important; }
+
+.wrapper {
+  width: 100%; }
+
+.contact-wrap {
+  background: #e8edf0; }
+
+.dbox {
+  width: 100%;
+  margin-bottom: 25px;
+  padding: 0 20px; }
+  @media (min-width: 768px) {
+    .dbox {
+      margin-bottom: 0;
+      padding: 0; } }
+  .dbox p {
+    margin-bottom: 0; }
+    .dbox p span {
+      font-weight: 500;
+      color: #000; }
+    .dbox p a {
+      color: #2553b8; }
+  .dbox .icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #770000;
+    margin: 0 auto;
+    margin-bottom: 20px; }
+    .dbox .icon span {
+      font-size: 20px;
+      color: #fff; }
+  .dbox .text {
+    width: 100%; }
+
+.btn {
+  padding: 12px 16px;
+  cursor: pointer;
+  position: center;
+  margin-bottom: 20px;
+  
+  }
+  
+  .btn:hover, .btn:active, .btn:focus {
+    box-shadow: 0px 10px 20px -6px rgba(0, 0, 0, 0.22) !important; }
+  .btn.btn-primary {
+    background: #800000 !important;
+    border-color: #800000 !important;
+    color: #fff; 
+    margin-top: 5px;
+    }
+    .btn.btn-primary:hover, .btn.btn-primary:focus {
+      border-color: #789F57 !important;
+      background: #789F57 !important; }
+
+.form-group1{
+  text-align: center;
+  margin-top: 10px;
+  align-content: center;
+
+}
+.form-group1 .btn{
+  position: relative;
+}
+.ajax-loader {
+  display: none !important;
+}
+.mb-4{
+  background: #800000;
+  text-align: center;
+  color: white;
+}
+
+.contactForm .label {
+  color: #000;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 600; }
+
+.contactForm .form-control {
+  border: none;
+  margin-bottom: 0px; }
+
+#map {
+  width: 100%; }
+  @media (max-width: 767.98px) {
+    #map {
+      height: 525px; } }
+
+
+#contactForm .form-control {
+  font-size: 16px; }
+
+
+

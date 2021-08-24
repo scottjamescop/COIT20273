@@ -144,15 +144,21 @@ function keppelfm_scripts() {
 	wp_style_add_data( 'keppelfm-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'keppelfm-jquery', get_template_directory_uri() . '/js/jquery.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'keppelfm-bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'shubh-main.js', get_template_directory_uri() . '/js/shubh-main.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'keppelfm-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css');
+	wp_enqueue_style( 'nav', get_template_directory_uri() . '/css/nav.css');
+	wp_enqueue_style( 'style', get_template_directory_uri() . '/css/keppelstyle.css');
+	wp_enqueue_style( 'shubh-style', get_template_directory_uri() . '/css/shubh-style.css');
 
-	wp_enqueue_style( 'vendor', get_template_directory_uri() . '/css/nav.css');
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'keppelfm_scripts' );
+
 
 /**
  * Implement the Custom Header feature.

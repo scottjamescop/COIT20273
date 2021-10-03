@@ -16,7 +16,7 @@
     /*HEADER TOP FONT COLOR*/
     font-family: 'Alegreya Sans SC', sans-serif;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1200px) {
     .darkHeader{
         background-color: rgba(0,0,0,0.5) !important;
         box-shadow: none !important;
@@ -110,7 +110,7 @@
     list-style: none;   
    
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1200px) {
     .darkHeader .navContainer ul.sub-menu li{
         background: rgba(0, 0, 0, 0.5) !important;        
     }
@@ -241,7 +241,7 @@
     position: relative;    
     /*top: 0;*/
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1200px) {
     /* Animation */
     /* Makes sure it appears on hover*/
     .navContainer .navTemplate > li > ul{
@@ -289,7 +289,7 @@
 }
 /*//////////////////////////////////////////////////*/
 /* ~=== Mobile ===~ */
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1199px) {
     /*//////////////////////////////////////////////////*/
     /* Menu Control */
 

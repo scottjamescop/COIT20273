@@ -15,11 +15,7 @@ Template Name: Home Page Template
 		border-radius: 20px;
 		box-shadow: 2px 2px 8px #777;
 	}
-	.hero{
-		height: 65vh;
-		position: relative;
-		background-image: linear-gradient(to left top, #f0f0f0, #ebebeb, #e6e6e6, #e1e1e1, #dcdcdc);
-	}
+	
 	button{
 		border-radius: 7px;
 		box-shadow: 1px 4px 20px #777;
@@ -78,9 +74,7 @@ Template Name: Home Page Template
 		bottom: 0;
 		left: 0;
 	}
-	.contentBlock{
-		padding: 80px 0px;
-	}
+	
 	.hero h2{
 		padding-bottom: 20px;
 	}
@@ -93,29 +87,80 @@ Template Name: Home Page Template
 	<div class="heroBG" style="background-image: url(<?php echo wp_get_attachment_image_src(29, "full")[0]; ?>); background-position: top right; background-size: contain; background-repeat: no-repeat;">
 		<div class="container" style="position: absolute; transform: translate(-50%, -50%); top: 60%; left: 50%;">
 			<div class="row">			
-				<div class="col-lg-7">
+				<div class="col-12 col-lg-7">
 					<h3><?php echo get_field('hero_flavor_text'); ?></h3>
-					<h1><?php echo get_field('hero_title'); ?></h1>
-					<h2><?php echo get_field('hero_sub_text'); ?></h2>
-					<button class="primary">Listen Now</button><button class="secondary">Become a Sponsor</button>
+					<h1 class="salsa"><?php echo get_field('hero_title'); ?></h1>
+					<h2 class="salsa"><?php echo get_field('hero_sub_text'); ?></h2>
+					<a href="<?php echo get_field('hero_button_one_link'); ?>"><button class="primary"><?php echo get_field('hero_button_one_text'); ?></button></a><a href="<?php echo get_field('hero_button_two_link'); ?>"><button class="secondary"><?php echo get_field('hero_button_two_text'); ?></button></a>
 				</div>
-				<div class="col-lg-5">
-					<div class="heroCircle d-none d-md-block" style="background-image: url(<?php echo wp_get_attachment_image_src(28, "full")[0]; ?>); background-position: top right; background-size: cover;">				
+				<div class="col-12 col-lg-5">
+					<div class="heroCircle d-none d-lg-block" style="background-image: url(<?php echo wp_get_attachment_image_src(28, "full")[0]; ?>); background-position: top right; background-size: cover;">				
 					</div>
+
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
+
 <section>
 	<div class="container-fluid sponsorRow">
-		<img src="<?php echo wp_get_attachment_image_src(33, "full")[0]; ?>" />
+		<div id="carouselExampleSlidesOnly" class="carousel slide d-none d-md-block" data-bs-ride="carousel">
+		  <div class="carousel-inner">
+		  	<!-- repeater loop -->
+		  	<?php 
+		  	$i = 0;
+		  	while( have_rows('ad_banners') ) : the_row();
+
+		        // Load sub field value.
+		        $desktopPic = get_sub_field('desktop_image');
+		        $mobilePic = get_sub_field('mobile_image');
+		        ?>
+		        <div class="carousel-item <?php if($i==0) { echo "active";} ?> ">
+			      <img src="<?php echo $desktopPic; ?>" class="" alt="...">
+			    </div>
+			    
+		       
+			<?php 
+		    // End loop.
+		    $i++;
+		    endwhile;
+		    ?>
+		    
+		  </div>
+		</div>
+		<div id="myCarousel" class="carousel slide d-block d-md-none" data-bs-ride="carousel">
+		  <div class="carousel-inner">
+		  	<!-- repeater loop -->
+		  	<?php 
+		  	$i = 0;
+		  	while( have_rows('ad_banners') ) : the_row();
+
+		        // Load sub field value.
+		        $desktopPic = get_sub_field('desktop_image');
+		        $mobilePic = get_sub_field('mobile_image');
+		        ?>
+		        <div class="carousel-item <?php if($i==0) { echo "active";} ?> ">
+			      <img src="<?php echo $mobilePic; ?>" class="" alt="...">
+			    </div>
+			    
+		       
+			<?php 
+		    // End loop.
+		    $i++;
+		    endwhile;
+		    ?>
+		    
+		  </div>
+		</div>
+
 	</div>
+
 </section>
 <section>
-	<div class="container">
+	<div class="container padt40 padb40">
 		<div class="row" style="margin-top: 40px;">
-			<div class="col-lg-5 squareContainer">
+			<div class="col-12 col-lg-5 squareContainer">
 				<div class="tr Square" style="background-image: url(<?php echo get_field('first_section_image'); ?>); background-position: center center; background-size: cover;">
 
 				</div>
@@ -125,11 +170,11 @@ Template Name: Home Page Template
 			</div>
 			<div class="col-lg-1">
 			</div>
-			<div class="col-lg-6">
-				<div class="contentBlock">
+			<div class="col-12 col-lg-6">
+				<div class="contentBlocksc">
 					<h3><?php echo get_field('sponsor_header'); ?></h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					<a href="<?php echo get_field('sponsor_button_link'); ?>"><button class="primary">Learn More</button></a>
+					<p><?php echo get_field('sponsor_text'); ?></p>
+					<a href="<?php echo get_field('sponsor_button_link'); ?>"><button class="primary fullWidth"><?php echo get_field('sponsor_button_text'); ?></button></a>
 				</div>
 			</div>
 		</div>
@@ -138,27 +183,36 @@ Template Name: Home Page Template
 <section>
 	<div class="container-fluid tileRow">
 		<div class="row">
-			<div class="col-md-4" >
-				<div class="tileContainer" style="background-image: url(<?php echo wp_get_attachment_image_src(37, "full")[0]; ?>); background-position: center center; background-size: cover; background-repeat: no-repeat;">
-					<div class="tileContent">
-						<h2>Our Shows</h2>
+			
+			<div class="col-12 col-lg-4 posrel tileParent" >
+				<a href="<?php echo get_field('qlolink'); ?>">
+					<div class="tileContainer" style="background-image: url(<?php echo get_field('qloimage'); ?>); background-position: center center; background-size: cover; background-repeat: no-repeat;">					
 					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="tileContainer" style="background-image: url(<?php echo wp_get_attachment_image_src(44, "full")[0]; ?>); background-position: center center; background-size: cover; background-repeat: no-repeat;">
 					<div class="tileContent">
-						<h2>Events</h2>
+						<h2><?php echo get_field('qlo'); ?></h2>
 					</div>
-				</div>
+				</a>
 			</div>
-			<div class="col-md-4" >
-				<div class="tileContainer" style="background-image: url(<?php echo wp_get_attachment_image_src(45, "full")[0]; ?>); background-position: center center; background-size: cover; background-repeat: no-repeat;">
+			<div class="col-12 col-lg-4 posrel tileParent" >
+				<a href="<?php echo get_field('qltlink'); ?>">
+					<div class="tileContainer" style="background-image: url(<?php echo get_field('qltimage'); ?>); background-position: center center; background-size: cover; background-repeat: no-repeat;">					
+					</div>
 					<div class="tileContent">
-						<h2>Gallery</h2>
+						<h2><?php echo get_field('qlttext'); ?></h2>
 					</div>
-				</div>
+				</a>
 			</div>
+			<div class="col-12 col-lg-4 posrel tileParent" >
+				<a href="<?php echo get_field('qlthlink'); ?>">
+					<div class="tileContainer" style="background-image: url(<?php echo get_field('qlthimage'); ?>); background-position: center center; background-size: cover; background-repeat: no-repeat;">					
+					</div>
+					<div class="tileContent">
+						<h2><?php echo get_field('qlthtext'); ?></h2>
+					</div>
+				</a>
+			</div>
+
+
 		</div>
 	</div>
 </section>

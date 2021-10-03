@@ -19,6 +19,9 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+		<!-- test -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>

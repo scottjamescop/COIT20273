@@ -14,15 +14,28 @@
 /* This will vertically center the nav items with the logo. Remove to Top Align */
 #header *{
     /*HEADER TOP FONT COLOR*/
+    font-family: 'Alegreya Sans SC', sans-serif;
+}
+@media only screen and (min-width: 1200px) {
+    .darkHeader{
+        background-color: rgba(0,0,0,0.5) !important;
+        box-shadow: none !important;
+        padding-top: 10px;
+    }
+    .darkHeader *{
+        color: #fff !important;
+        text-shadow: 2px 2px 4px #222;
+    }
 }
 #header{
     position: fixed;
     width: 100%;
     z-index: 1001;
-    height: 100px;
+    height: calc(auto + 20px);
     transition: .35s all;
     top: 0;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 2px 2px 6px #444;
 }
 #header.small *{
   text-shadow: none;
@@ -58,11 +71,9 @@
     position: relative; 
 }
 .logoContainer a, .navContainer{
-    position: absolute;
+    position: relative;
     width: 100%;
     left: 0;
-    top: 50%;
-    transform: translateY(-50%);
     padding-left: 10px;
     font-family: 'Oswald', sans-serif !important;
     text-transform: uppercase;
@@ -78,6 +89,7 @@
 #menu {
     display: table-cell;
     vertical-align: middle;
+    float: right;
 }
 /*----*/
 /* The parent container of all menu items */
@@ -98,10 +110,18 @@
     list-style: none;   
    
 }
+@media only screen and (min-width: 1200px) {
+    .darkHeader .navContainer ul.sub-menu li{
+        background: rgba(0, 0, 0, 0.5) !important;        
+    }
+}
+.darkHeader .navContainer ul.sub-menu li{
+    background: rgba(230, 230, 230, 1);        
+}
 
 .navContainer ul.sub-menu li{
-    background: rgba(0, 0, 0, 0.65);
-  
+    background: #fff;
+    
 }
 
 .small .navContainer ul.sub-menu li{
@@ -157,7 +177,7 @@
       content: '';
       height: 35px;
       width: 100%;
-      border-bottom: solid 4px #019fb6;
+      border-bottom: solid 4px #dc0000;
       bottom: 0;
       -webkit-transform: scaleX(0);
       -ms-transform: scaleX(0);
@@ -178,7 +198,9 @@
 
 }
 
-
+.sub-menu{
+    border-bottom: 1px solid black;
+}
 #header.small .navContainer .navTemplate > li > ul{
     background-image: linear-gradient(to right bottom, #dddddd, #d1d1d1, #cfcfcf, #c4c4c4, #bfbfbf);
 }
@@ -219,7 +241,7 @@
     position: relative;    
     /*top: 0;*/
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1200px) {
     /* Animation */
     /* Makes sure it appears on hover*/
     .navContainer .navTemplate > li > ul{
@@ -267,7 +289,7 @@
 }
 /*//////////////////////////////////////////////////*/
 /* ~=== Mobile ===~ */
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1199px) {
     /*//////////////////////////////////////////////////*/
     /* Menu Control */
 
@@ -275,7 +297,7 @@
         display: none !important;
     }
     li.menu-item-has-children.active .sub-menu{
-        display: block !important;
+        display: block !important;        
     }
     li.menu-item-has-children.active:before {
         transform: rotate(180deg);
@@ -460,4 +482,8 @@
 
 main{
     padding-top: 75px;
+}
+
+.text-right{
+    text-align: right;
 }

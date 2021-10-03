@@ -1,0 +1,65 @@
+	
+
+	.site-main{
+		margin:5%;
+	}
+
+	.h1_sponsor{
+		padding-top: 2%;
+		padding-bottom: 2%;
+	}
+
+	.introduction{
+		float:left; 
+		display: inline;
+	}
+
+	.image_introduction{
+		float:left; 
+		display:inline;
+		margin-left: 50px;
+	}
+
+	.first_image{
+		float: right;
+		max-width: 90%; 
+		padding:3%;
+		margin-right: 8%;
+	}
+
+	.a_sponsor{
+		cursor:pointer;
+	}
+	
+	.h2_sponsor{
+		color: red; 
+		font-weight: bold;
+	}
+
+	.p_sponsor{
+		font-size: 14px;
+		text-align: justify;
+	}
+
+	.red_p{
+		color: red; 
+		font-size: 14px;
+		text-align: justify;
+	}
+
+	.red_p_bold{
+		color: red; 
+		font-weight: bold;
+		font-size: 14px;
+		text-align: justify;
+	}
+
+	.seccond_third_images{
+		float:left; 
+		display:inline;
+		padding:3%;
+	}
+
+	.myDiv{
+		clear: both;
+	}

@@ -7,6 +7,8 @@
  * @package KeppelFM
  */
 
+
+
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
 	define( '_S_VERSION', '1.0.0' );
@@ -144,10 +146,19 @@ function keppelfm_scripts() {
 	wp_style_add_data( 'keppelfm-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'keppelfm-jquery', get_template_directory_uri() . '/js/jquery.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'keppelfm-datatables', get_template_directory_uri() . '/js/datatables.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'keppelfm-bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'keppelfm-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'keppelfm-custom', get_template_directory_uri() . '/js/custom.js', array(), _S_VERSION, true );
+	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css');
+	wp_enqueue_style( 'datatables', get_template_directory_uri() . '/css/datatables.css');
+	wp_enqueue_style( 'nav', get_template_directory_uri() . '/css/nav.css');
+	wp_enqueue_style( 'style', get_template_directory_uri() . '/css/keppelstyle.css');
 
-	wp_enqueue_style( 'vendor', get_template_directory_uri() . '/css/nav.css');
-
+	wp_enqueue_style( 'shubh-style', get_template_directory_uri() . '/css/shubh-style.css');
+	wp_enqueue_style('duncanStyle', get_template_directory_uri() . '/css/duncanStyle.css');
+	wp_enqueue_style('duncanStyle', get_template_directory_uri() . '/css/duncanStyleSearch.scss');
+	wp_enqueue_style('jinyueStyle', get_template_directory_uri() . '/css/jinyueStyle.css');
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -179,5 +190,24 @@ require get_template_directory() . '/inc/customizer.php';
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
+}
+
+
+
+
+
+/* DF Add a ACF Options Menu */
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page(array(
+		'page_title' 	=> 'OSP Timetable',
+		'menu_title'	=> 'OSP Timetable',
+		'menu_slug' 	=> 'osp-timetable-general-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false,
+		'icon_url' => 'dashicons-calendar'
+	));
+	
+	
 }
 
